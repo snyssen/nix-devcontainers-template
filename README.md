@@ -1,0 +1,1 @@
+# nix-devcontainers-template
