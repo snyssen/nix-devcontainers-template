@@ -1,0 +1,28 @@
+services:
+  dev:
+    build:
+      context: ../
+      dockerfile: .devcontainer/Dockerfile
+      args:
+        USER_UID: ${USER_UID:-1000}
+        USER_GID: ${USER_GID:-1000}
+    volumes:
+      - ../:/workspace:cached
+      - nix-cache:/nix
+    network_mode: host
+    command: bash -c "sleep infinity"
+
+  # Ad any service you need, e.g. mariadb
+  # mariadb:
+  #   image: mariadb:10.6.17
+  #   container_name: mariadb
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=changeme
+  #     - MARIADB_DATABASE=changeme
+  #   ports:
+  #     - 3306:3306
+  #   volumes:
+  #     - db-data:/var/lib/mysql
+volumes:
+  nix-cache:
+  # db-data:
