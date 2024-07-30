@@ -12,7 +12,10 @@
   // Add the IDs of extensions you want installed when the container is created.
   "customizations": {
     "vscode": {
-      "extensions": ["mkhl.direnv"]
+      "extensions": ["mkhl.direnv"],
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/zsh"
+      }
     }
   }
 }

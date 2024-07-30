@@ -6,6 +6,8 @@ services:
       args:
         USER_UID: ${USER_UID:-1000}
         USER_GID: ${USER_GID:-1000}
+        # Add any plugin relevant to your project
+        ZSH_PLUGINS: "git"
     volumes:
       - ../:/workspace:cached
       - nix-cache:/nix
