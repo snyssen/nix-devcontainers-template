@@ -1,4 +1,4 @@
-FROM ghcr.io/xtruder/nix-devcontainer:v1
+FROM ghcr.io/xtruder/nix-devcontainer@sha256:b4e4049d00c55bb9663cb6ef446b9a0615ad0e8d64a1876372fd773ee7b9ecac
 VOLUME /nix
 
 # Install zsh, oh-my-zsh and plugins
